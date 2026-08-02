@@ -1,0 +1,107 @@
+{
+  "name": "IdeaSubmission",
+  "type": "object",
+  "properties": {
+    "idea_text": {
+      "type": "string",
+      "title": "Idea Description"
+    },
+    "builder_name": {
+      "type": "string",
+      "title": "Builder Name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "generating",
+        "complete",
+        "error"
+      ],
+      "default": "pending",
+      "title": "Status"
+    },
+    "mvp_title": {
+      "type": "string",
+      "title": "MVP Title"
+    },
+    "mvp_tagline": {
+      "type": "string",
+      "title": "MVP Tagline"
+    },
+    "mvp_type": {
+      "type": "string",
+      "enum": [
+        "Web App",
+        "Website",
+        "Tool",
+        "Mobile App",
+        "Service"
+      ],
+      "title": "MVP Type"
+    },
+    "mvp_summary": {
+      "type": "string",
+      "title": "MVP Summary"
+    },
+    "mvp_features": {
+      "type": "array",
+      "title": "Key Features",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "mvp_audience": {
+      "type": "string",
+      "title": "Target Audience"
+    },
+    "mvp_tech_stack": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Tech Stack"
+    },
+    "mvp_monetization": {
+      "type": "string",
+      "title": "Monetization"
+    },
+    "mvp_pages": {
+      "type": "array",
+      "title": "Pages",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "mvp_next_steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Next Steps"
+    },
+    "mvp_html": {
+      "type": "string",
+      "title": "Landing Page HTML"
+    }
+  },
+  "required": [
+    "idea_text"
+  ]
+}
